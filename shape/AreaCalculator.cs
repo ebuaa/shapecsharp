@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace shape
 {
-    public class AreaCalculator { 
-        public double TotalArea(Rectangle[] arrRectangles)
+    public class AreaCalculator {
+
+        public double TotalArea(Shape[] arrShapes)
         {
-            double area;
-            foreach (var objRectangle in arrRectangles)
+            double area = 0;
+            foreach (var objShape in arrShapes)
             {
-                area += objRectangle.Height * objRectangle.Width;
+                area += objShape.Area();
             }
             return area;
         }

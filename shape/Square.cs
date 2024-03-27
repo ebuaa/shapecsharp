@@ -6,15 +6,13 @@ using System.Threading.Tasks;
 
 namespace shape
 {
-    public class Rectangle : Shape
+    internal class Square : Shape
     {
-        public double Height { get; set; }
-        public double Width { get; set; }
+        public double Height {  get; set; }
 
         public override double Area()
-        {  
-            return Height * Width; 
+        {
+            return Height * Height;
         }
-
     }
 }
